@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900');
+*
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'poppins',sans-serif;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background-image: "C:\\xampp\\htdocs\\My project task\\images\\images.jfif";
+  background-size: 400%,400%;
+}
+
+header
+{
+
+  margin: 0;
+  top:100px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+nav
+{
+  height: 100px;
+  background: #FFFF00;
+  box-shadow: 0 10px 50px #0000FF;
+}
+
+nav .logo
+{
+  font-size: 30px;
+  position: absolute;
+  top:20px;
+  left: 15%;
+}
+blink
+{
+  animation: blink  3s linear infinite;
+}
+@keyframes blink
+{
+20% {color:#C80D0D}
+40% {color:#F5F445}
+60%{color:#02F46B}
+80%{color:#0DC87D}
+100%{color:#EAECEE}
+{color:#EAECEE}
+}
+nav ul
+{
+float: right;
+margin-right: 50px;
+margin-top: 10px;
+}
+nav ul li
+{
+  display: inline-block;
+  line-height: 70px;
+  margin:0 20px;
+
+}
+nav ul li a
+{
+  position: relative;
+  color: #000;
+  font-size: 20px;
+  padding: 2px 0;
+  text-transform: uppercase;
+}
+nav ul li a::before
+{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background:#ffc107 ;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before
+{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+nav ul li a:hover:after
+{
+  transform: scaleX(1);
+  transform-origin: left;
+
+}
+label #button,
+label #cancel
+{
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  courser:pointer;
+  display: none;
+}
+
+#check
+{
+  display: none;
+}
+nav input[type="submit"]
+{
+  display: none;
+}
+
+@media(max-width:1118px)
+{
+nav .logo
+{
+  left: 8%;
+}
+}
+@media(max-width:944px)
+{
+
+nav .logo
+{
+  left: 20%;
+  top: 20px;
+  width:130px;
+}
+nav ul li a
+{
+font-size: 17px;
+}
+}
+
+@media(max-width:860px)
+{
+
+  label #button
+  {
+  display: block;
+  }
+ul
+{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all .5s;
+}
+nav ul li
+{
+  display: block;
+  margin:50px 0px;
+  line-height: 30px;
+}
+nav ul li a
+{
+  font-size: 20px;
+}
+#check:checked ~ ul
+{
+left: 0;
+}
+#check:checked ~ label #button
+{
+  display: none;
+}
+#check:checked ~ label #cancel
+{
+  display: block;
+}
+input
+{
+  display: none;
+}
+}
+.fa-home
+{
+  color: #000504;
+}
+.fa-book
+{
+  color: #000504;
+}
+.fa-microchip
+{
+  color: #000504;
+}
+.fa-signal
+{
+  color: #000504;
+}
+
+.fa-eye
+{
+  color: #000504;
+}
+.fa-address-book
+{
+  color: #000504;
+}
+.fa-comments
+{
+  color: #000504;
+}
+.fa-user-circle
+{
+  color: #000504;
+}
+/*all contents for another programming*/
+img
+{
+  height: 100px;
+}
+.container
+{
+  top:70px;
+  width: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.container .card
+{
+position:relative;
+}
+.container .card .face
+{
+  width: 300px;
+  height: 380px;
+  margin: 20px;
+  transition: 0.5s;
+}
+.container .card .face1
+{
+  height: 200px;
+  position: relative;
+  background: #0C9199;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+.container .card:hover .face.face1 .content
+{
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.container .card:hover .face.face1 .content h3
+{
+/*  margin: 0px 0 0;*/
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.0em;
+}
+.container .card:hover .face.face1
+{
+  top:5px;
+  background: #ff0057;
+  transform:translateY(-60px);
+}
+.container .card .face.face1 .content
+{
+opacity: 0.2;
+transition: 0.5s;
+}
+.container .card .face.face2
+{
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  text-align: justify;
+  box-shadow: 0 10px 50px #000504;
+  box-sizing: border-box;
+  transform: translateY(-100px);
+  height: 250px;
+  top:40px;
+}
+.container .card .face.face2:hover
+{
+background-color: #333333;
+color: #fff;
+}
+.container .card .face.face2 .content:hover a:hover
+{
+color:#fff;
+background-color:black;
+font-size:20px;
+box-shadow: 0 20px 50px #000504;
+box-sizing: border-box;
+width: 100%;
+text-align: center;
+
+}
+.container .card .face.face2 .content p
+{
+margin: 0;
+padding: 0;
+padding-bottom: 10px;
+}
+.container .card .face.face2 .content a
+{
+  height:50px;
+  border: none;
+  border-radius: 50px;
+  margin: 5px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  text-align:justify;
+  color: #fff;
+  padding:15px;
+  border: 1px solid #fff;
+}
+.container .card .face.face2 .content a:hover
+{
+  background: #333;
+  color: #fff;
+}
+
+
+.container .card:hover .face.face2
+{
+  transform: translateY(-100px);
+}
+@media(max-width:1118px)
+{
+div .card
+  {
+    display: none;
+  }
+}
+/* other contents*/
+.details
+{
+
+  text-indent: 50px;
+  padding: 5px;
+  text-align: left;
+  font-size: 18px;
+  font-style: italic;
+  font-family: sans-serif;
+}
+.details h2
+{
+  margin: 10px 0 20px;
+  background: #37c0fb;
+  line-height: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.details a
+{
+text-decoration: none;
+color: black;
+}
+.details h3
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color:#37c0fb;
+  font-family: 'Roboto', sans-serif;
+}
+.container1
+{
+  width:600px;
+  margin-left:250px;
+  margin-right:250px;
+  font-size:23px;
+  font-style:Bold;
+  padding:10px;
+}
